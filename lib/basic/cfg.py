@@ -15,9 +15,9 @@ class Cfg:
 
     USR_DIR = os.path.dirname(SHP_DIR)
 
-    SHP_APPAPI_URL = 'http://3.35.209.41/shp/appapi'
-    SHP_APPATH_URL = 'http://3.35.209.41/shp/appath'
-    SHP_APPMGR_URL = 'http://3.35.209.41/shp/appmgr'
+    SHP_APPAPI_URL = 'http://54.180.89.85/shp/appapi'
+    SHP_APPATH_URL = 'http://54.180.89.85/shp/appath'
+    SHP_APPMGR_URL = 'http://54.180.89.85/shp/appmgr'
 
 
     @staticmethod
