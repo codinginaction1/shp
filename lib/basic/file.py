@@ -106,9 +106,9 @@ class File:
         # Only allow predefined directories for upload purpose.
         # Do not use arbitray directories as an argument.
         if upload_dir == 'pri':
-          dname = Cfg.CBI_PRI_DIR
+          dname = Cfg.SHP_PRI_DIR
         else:
-          dname = Cfg.CBI_PUB_DIR
+          dname = Cfg.SHP_PUB_DIR
 
         dir_name = os.path.join(dname, service_dir, day)
         if not os.path.exists(dir_name):

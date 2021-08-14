@@ -31,7 +31,7 @@ class Log:
 
         logger = logging.getLogger()
         logger.setLevel(logging.DEBUG)
-        dir_name = os.path.join(Cfg.CBI_LOG_DIR, time.strftime('%Y%m%d'))
+        dir_name = os.path.join(Cfg.SHP_LOG_DIR, time.strftime('%Y%m%d'))
         if not os.path.exists(dir_name):
             os.mkdir(dir_name)
             os.chmod(dir_name, 0o757)

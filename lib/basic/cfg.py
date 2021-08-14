@@ -7,23 +7,23 @@ import os
 
 
 class Cfg:
-    CBI_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    CBI_CFG_DIR = CBI_DIR + '/cfg'
-    CBI_LOG_DIR = CBI_DIR + '/log'
-    CBI_PRI_DIR = CBI_DIR + '/pri'
-    CBI_PUB_DIR = CBI_DIR + '/pub'
+    SHP_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    SHP_CFG_DIR = SHP_DIR + '/cfg'
+    SHP_LOG_DIR = SHP_DIR + '/log'
+    SHP_PRI_DIR = SHP_DIR + '/pri'
+    SHP_PUB_DIR = SHP_DIR + '/pub'
 
-    USR_DIR = os.path.dirname(CBI_DIR)
+    USR_DIR = os.path.dirname(SHP_DIR)
 
-    CBI_APPAPI_URL = 'http://3.35.209.41/cbi/appapi'
-    CBI_APPATH_URL = 'http://3.35.209.41/cbi/appath'
-    CBI_APPMGR_URL = 'http://3.35.209.41/cbi/appmgr'
+    SHP_APPAPI_URL = 'http://3.35.209.41/cbi/appapi'
+    SHP_APPATH_URL = 'http://3.35.209.41/cbi/appath'
+    SHP_APPMGR_URL = 'http://3.35.209.41/cbi/appmgr'
 
 
     @staticmethod
     def get_ini(filename, section, name=''):
         cfp = configparser.ConfigParser()
-        cfp.read(Cfg.CBI_CFG_DIR + '/ini/' + filename)
+        cfp.read(Cfg.SHP_CFG_DIR + '/ini/' + filename)
         cfps = cfp[section]
         if name:
             return cfps[name]
@@ -51,6 +51,6 @@ class Cfg:
     @staticmethod
     def get_token(app_id):
         cfp = configparser.ConfigParser()
-        cfp.read(Cfg.CBI_PRI_DIR + '/oauth2/token_' + app_id + '.ini')
+        cfp.read(Cfg.SHP_PRI_DIR + '/oauth2/token_' + app_id + '.ini')
         token = cfp[app_id]
         return token

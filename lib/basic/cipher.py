@@ -20,7 +20,7 @@ class Cipher:
         # This function is executed actually just once.
         if cls.key is None:
             cfp = configparser.ConfigParser()
-            cfp.read(os.path.join(Cfg.CBI_CFG_DIR, 'ini', 'cipher.ini'))
+            cfp.read(os.path.join(Cfg.SHP_CFG_DIR, 'ini', 'cipher.ini'))
             cf = cfp['cipher']
             # The length of key is 32 in case of AES256.
             cls.key = cf['key']

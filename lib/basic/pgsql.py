@@ -27,7 +27,7 @@ class Pgsql:
 
     def connect(self, **kwargs):
         cfp = configparser.ConfigParser()
-        cfp.read(os.path.join(Cfg.CBI_CFG_DIR, 'ini', 'db.ini'))
+        cfp.read(os.path.join(Cfg.SHP_CFG_DIR, 'ini', 'db.ini'))
         cf = cfp[self.db_id]
         for kw in kwargs:
             if isinstance(kwargs[kw], str):
