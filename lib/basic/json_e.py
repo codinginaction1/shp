@@ -3,7 +3,7 @@
 
 
 import json
-from cbi.lib.basic.error import Error
+from shp.lib.basic.error import Error
 
 
 class Json_e:

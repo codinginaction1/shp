@@ -6,7 +6,7 @@ import configparser
 from Crypto import Random
 from Crypto.Cipher import AES
 import os
-from cbi.lib.basic.cfg import Cfg
+from shp.lib.basic.cfg import Cfg
 
 
 class Cipher:

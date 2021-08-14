@@ -6,8 +6,8 @@ from flask import request
 import os
 import re
 import time
-from cbi.lib.basic.cfg import Cfg
-from cbi.lib.basic.error import Error
+from shp.lib.basic.cfg import Cfg
+from shp.lib.basic.error import Error
 
 
 class File:
@@ -75,7 +75,7 @@ class File:
         dir_name = cls.get_mk_dir_name(upload_dir, service_dir, day)
 
         path_file_name = os.path.join(dir_name, safe_file_name)
-        path_file_url = '/cbi/' + upload_dir + '/' + service_dir + '/' + day + '/' + safe_file_name
+        path_file_url = '/shp/' + upload_dir + '/' + service_dir + '/' + day + '/' + safe_file_name
 
         return path_file_name, path_file_url
 

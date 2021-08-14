@@ -7,7 +7,7 @@ import logging
 import os
 import psycopg2
 import psycopg2.extras
-from cbi.lib.basic.cfg import Cfg
+from shp.lib.basic.cfg import Cfg
 
 
 class Pgsql:

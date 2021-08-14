@@ -6,7 +6,7 @@ import logging
 import os
 import re
 import time
-from cbi.lib.basic.cfg import Cfg
+from shp.lib.basic.cfg import Cfg
 
 
 class Log:

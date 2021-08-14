@@ -3,7 +3,7 @@
 
 
 from flask import g, has_app_context
-from cbi.lib.basic.pgsql import Pgsql
+from shp.lib.basic.pgsql import Pgsql
 
 
 class Pgsqls:
