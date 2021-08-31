@@ -12,7 +12,7 @@ from shp.lib.basic.cfg import Cfg
 
 class Pgsql:
     def __init__(self, db_id='', **kwargs):
-        logging.info('__init__ called')
+        # logging.info('__init__ called')
         self.db_id = db_id
         self.conn = None
         self.cursor = None
@@ -21,7 +21,7 @@ class Pgsql:
 
 
     def __del__(self):
-        logging.info('__del__ called')
+        # logging.info('__del__ called')
         self.close()
 
 
@@ -38,7 +38,7 @@ class Pgsql:
         try:
             self.conn = psycopg2.connect(host=cf['host'], port=cf['port'], user=cf['user'], password=cf['password'], dbname=cf['dbname'])
         except Exception as err:
-            logging.info('ERR_psycopg2_connect: ' + str(err))
+            logging.error('ERR_psycopg2_connect: ' + str(err))
             raise err
 
         self.cursor = self.conn.cursor(cursor_factory=kwargs['cursor_factory'])
@@ -48,18 +48,18 @@ class Pgsql:
         if self.cursor:
             if not self.cursor.closed:
                 self.cursor.close()
-                logging.info('cursor.close called')
+                # logging.info('cursor.close called')
         if self.conn:
             if not self.conn.closed:
                 self.conn.close()
-                logging.info('conn.close called')
+                # logging.info('conn.close called')
 
 
     def execute(self, query, param={}):
         try:
             self.cursor.execute(query, param)
         except Exception as err:
-            logging.info('ERR_cursor_execute: ' + str(err) + self.cursor.query.decode())
+            logging.error('ERR_cursor_execute: ' + str(err) + self.cursor.query.decode())
             self.rollback()
             raise err
 
