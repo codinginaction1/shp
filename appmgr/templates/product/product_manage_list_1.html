@@ -1,0 +1,22 @@
+<form id="frm_product_manage_list_1" method="post" action="product_manage_list_1">
+  <input type="hidden" name="frm_add" value="frm_product_manage_list_0">
+  <input type="hidden" name="frm_div" value="div_product_manage_list_1">
+  <table class="table table-striped table-bordered" style="width:100%;">
+    <thead>
+      <tr>
+        <th style="width:30%;">product_id</th>
+        <th style="width:auto;">product_name</th>
+        <th style="width:30%;">product_price</th>
+      </tr>
+    </thead>
+    <tbody>
+{% for row in result['rows'] %}
+      <tr>
+        <td>{{ row['product_id'] }}</td>
+        <td>{{ row['product_name'] }}</td>
+        <td>{{ row['product_price'] }}</td>
+      </tr>
+{% endfor %}
+    </tbody>
+  </table>
+</form>
